@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS Practice</title>
+    <link rel="stylesheet" href="dist/border-radius-app.min.css">
+</head>
+<body>
+
+    <div class="greeting">
+        <h1>Hello</h1>
+        <p>This is JavaScript Practice ;)</p>
+    </div>
+
+    <section id="border-radius-app" class="border-radius-app">
+        <h3>Border Radius Generator</h3>
+
+        <div id="rectangle" class="rectangle"></div>
+        <div class="ranges-box">
+            <label>
+                Верхний левый угол:<br><span class="vlu">0</span><code>%</code><br>
+                <input type="range" min="0" max="100" value="0">
+            </label>
+            <label>
+                Верхний правый угол:<br><span class="vpu">0</span><code>%</code><br>
+                <input type="range" min="0" max="100" value="0">
+            </label>
+            <label>
+                Нижний левый угол:<br><span class="nlu">0</span><code>%</code><br>
+                <input type="range" min="0" max="100" value="0">
+            </label>
+            <label>
+                Нижний правый угол:<br><span class="npu">0</span><code>%</code><br>
+                <input type="range" min="0" max="100" value="0">
+            </label>
+        </div>
+        <div class="html-box">
+            <span id="html-box">border-radius: 0% 0% 0% 0%;</span>
+            <button class="btn" data-clipboard-target="#html-box">Copy</button>
+        </div>
+
+    </section>
+
+    <script src="dist/clipboard.min.js"></script>
+    <script src="dist/border-radius-app.js"></script>
+</body>
+</html>

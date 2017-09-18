@@ -1,0 +1,34 @@
+{
+  "name": "javascript-practice",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "cssnano": "^3.10.0",
+    "cssnano-cli": "^1.0.5",
+    "onchange": "^3.2.1",
+    "parallelshell": "^3.0.1"
+  },
+  "scripts": {
+    "sync": "browser-sync start --server --files \"*.css, *.js, *.html\"",
+    "build:js": "babel src -d dist --presets es2015",
+    "build:css": "cssnano src/border-radius-app.css dist/border-radius-app.min.css",
+    "watch:js": "onchange \"src/*.js\" -- npm run build:js",
+    "watch:css": "onchange \"src/*.css\" -- npm run build:css",
+    "watch:all": "parallelshell \"npm run sync\" \"npm run watch:js\" \"npm run watch:css\"",
+    "dev": "npm run watch:all"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "browser-sync": "^2.18.13",
+    "watch-http-server": "^0.7.6"
+  },
+  "description": ""
+}
