@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
+/*
+    When the outline is 0, the outline-width is 0px
+    When the outline is none, the outline-width is medium
+*/
+*:focus {
+    outline: 0;
+}
+
+body {
+    max-width: 580px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    font-family: Verdana;
+    background: #D4D4DC;
+    color: #1D1E22;
+    overflow-x: hidden;
+}
+
+.tabs {
+    width: 100%;
+    margin-bottom: 30px;
+}
+.tabs:last-child {
+    margin-bottom: 0;
+}
+.tabs__item {
+    display: inline-block;
+    background: #FEDA6A;
+    cursor: pointer;
+    /* inline block hack for IE 6&7 */
+    margin-right: 1px;
+    margin-bottom: 1px;
+    zoom: 1;
+    *display: inline;
+    padding: 5px 15px;
+    transition: .3s;
+}
+.tabs__item.tabs__item_active {
+    background: #393F4D;
+    color: #D4D4DC;
+    cursor: default;
+}
+.tabs__wrap {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+}
+.tabs__content {
+    background: #FEDA6A;
+    padding: 15px;
+    grid-column-start: 1;
+    grid-row-start: 1;
+    width: 100%;
+    height: fit-content;
+    transition: .3s;
+}
+.tabs__content.tabs__content_show {
+    visibility: visible;
+    opacity: 1;
+}
+.tabs__content.tabs__content_hide {
+    visibility: hidden;
+    opacity: 0;
+}
