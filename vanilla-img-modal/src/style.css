@@ -42,7 +42,7 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-    .vanilla-gallery img {
+    .vanilla-gallery>img {
         width: 50%;
     }
     .vanilla-gallery {
@@ -110,6 +110,20 @@ body {
     font-size: 18px;
     padding: 10px 0;
     color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+    .image-modal .close {
+        top: auto;
+        right: 50%;
+        bottom: 20px;
+        margin-right: -20px;
+        width: 40px;
+    }
+    .image-modal figure figcaption {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
 }
 
 .zoom {

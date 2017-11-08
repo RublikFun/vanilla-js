@@ -29,14 +29,12 @@ images.forEach(function(image) {
             figure.classList.add('zoom-out');
             imageModalWrap.classList.remove('show');
             setTimeout(() => imageModalWrap.remove(), 500);
-
         }
 
     }
 });
 
 function template(url, alt, text) {
-
     html = `<div class="close">close</div>
             <figure class="zoom">
                 <img src=" ${url} " alt="${alt}">
