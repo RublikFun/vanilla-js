@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    box-sizing: border-box;
+}
+
+*:focus {
+    outline: 0;
+}
+
+body {
+    width: 100%;
+    max-width: 960px;
+    padding: 50px 0;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: Verdana;
+    background: #eee;
+    color: #1D1E22;
+    overflow-x: hidden;
+}
+
+.accordion {
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.accordion:last-child {
+    margin-bottom: 0;
+}
+
+.accordion .title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #1D1E22;
+    padding: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    background: #f8ab99;
+    transition: .3s ease-in;
+}
+
+.accordion .title:after {
+    content: '+';
+}
+
+.accordion .title.active,
+.accordion .title:hover {
+    background: #ff8b99;
+}
+
+.accordion .title.active:after {
+    content: '-';
+}
+
+.accordion .body {
+    background: #ccc;
+}
+
+.accordion .body article {
+    padding: 20px;
+}
+
+.accordion .body p,
+ol,
+ul {
+    font-size: 14px;
+    line-height: 18px;
+    margin-bottom: 20px;
+}
+
+ol li,
+ul li {
+    line-height: 20px;
+}
+
+ol,
+ul {
+    padding-left: 20px;
+}
+
+.accordion .body p:last-child,
+ol:last-child,
+ul:last-child {
+    margin-bottom: 0;
+}
