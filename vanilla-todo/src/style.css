@@ -81,16 +81,25 @@ header h1 {
 }
 
 .todo-form .add-btn,
-.alert-btn {
+.alert-btn,
+.alert-btn-green {
     display: inline-block;
     padding: 8px 16px;
-    background: #74A0C2;
     color: #fff;
     cursor: pointer;
     transition: .3s;
     border: none;
     border-radius: 0;
     box-shadow: none;
+}
+
+.alert-btn-green {
+    background-color: #00b058;
+}
+
+.todo-form .add-btn,
+.alert-btn {
+    background: #74A0C2;
 }
 
 .todo-form .add-btn:hover {

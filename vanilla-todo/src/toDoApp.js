@@ -18,7 +18,6 @@ addNewTaskBtn.addEventListener('click', newTask, false);
 deleteBntArray.map((btn) => btn.addEventListener('click', deleteTask, false));
 
 function deleteTask(event) {
-    console.log(this.parentElement.classList.contains('done'));
     if (this.parentElement.classList.contains('done')) {
         this.parentElement.style.display = 'none';
         swal({
@@ -31,15 +30,31 @@ function deleteTask(event) {
         });
     } else {
         swal({
-            title: "You have not completed the assignment yet!",
-            icon: "warning",
-            button: {
-                text: "Okay",
-                className: "alert-btn",
-            }
-        });
+                title: "You have not completed the assignment yet!",
+                text: 'If you complete this task push button "Done".',
+                icon: "warning",
+                buttons: {
+                    confirm: {
+                        text: "Done",
+                        className: "alert-btn-green",
+                        value: 'done',
+                        visible: true,
+                        closeModal: true
+                    },
+                    cancel: {
+                        text: "Okay",
+                        className: "alert-btn",
+                        value: 'close',
+                        visible: true,
+                        closeModal: true,
+                    }
+                }
+            })
+            .then((value) => {
+                if (value == 'done') event.target.parentElement.classList.toggle('done')
+            });
     }
-};
+}
 
 function doneTask(event) {
     if (event.target.tagName == 'LI') {
@@ -53,7 +68,7 @@ function doneTask(event) {
 function newTask() {
     let newListItem = document.createElement('li'),
         inputValue = input.value,
-        text = '<span>' + inputValue + '</span><i class="remove">&#215;</i>';
+        text = `<span>${inputValue}</span><i class="remove">&#215;</i>`;
 
     newListItem.innerHTML = text;
 

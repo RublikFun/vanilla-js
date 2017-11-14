@@ -20,7 +20,6 @@ deleteBntArray.map(function (btn) {
 });
 
 function deleteTask(event) {
-    console.log(this.parentElement.classList.contains('done'));
     if (this.parentElement.classList.contains('done')) {
         this.parentElement.style.display = 'none';
         swal({
@@ -34,14 +33,29 @@ function deleteTask(event) {
     } else {
         swal({
             title: "You have not completed the assignment yet!",
+            text: 'If you complete this task push button "Done".',
             icon: "warning",
-            button: {
-                text: "Okay",
-                className: "alert-btn"
+            buttons: {
+                confirm: {
+                    text: "Done",
+                    className: "alert-btn-green",
+                    value: 'done',
+                    visible: true,
+                    closeModal: true
+                },
+                cancel: {
+                    text: "Okay",
+                    className: "alert-btn",
+                    value: 'close',
+                    visible: true,
+                    closeModal: true
+                }
             }
+        }).then(function (value) {
+            if (value == 'done') event.target.parentElement.classList.toggle('done');
         });
     }
-};
+}
 
 function doneTask(event) {
     if (event.target.tagName == 'LI') {
