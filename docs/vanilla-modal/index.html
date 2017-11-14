@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vanilla JS Modal</title>
+    <link rel="stylesheet" href="dist/style.min.css">
+</head>
+<body>
+
+    <div class="buttons">
+        <button data-modal-btn="modal1" class="btn">Olpen Modal 1</button>
+        <button data-modal-btn="modal2" class="btn">Olpen Modal 2</button>
+    </div>
+
+    <div data-modal="modal1" class="modal">
+        <div class="modal__container">
+            <i class="modal__close">&times;</i>
+
+            <div class="modal__content">
+                <h2>Joker said</h2>
+                <img src="http://www.comingsoon.net/assets/uploads/2016/07/jokernHARLEEN.jpg" alt="Joker">
+                <p>I had a vision of a world without Batman. The Mob ground out a little profit and the police tried to shut them down one block at a time. And it was so boring. I've had a change of heart. I don't want Mr Reese spoiling everything but why should I have all the fun? Let's give someone else a chance. If Coleman Reese isn't dead in 60 minutes then I blow up a hospital.</p>
+            </div>
+        </div>
+    </div>
+
+    <div data-id="modal2" class="modal">
+        <div class="modal__container">
+            <i class="modal__close">&times;</i>
+
+            <div class="modal__content">
+                <h2>Batman said</h2>
+                <img src="https://swelllness.files.wordpress.com/2014/05/batman.jpg" alt="Joker">
+                <p>Hero can be anyone. Even a man knowing something as simple and reassuring as putting a coat around a young boy shoulders to let him know the world hadn't ended.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="dist/modal.js"></script>
+</body>
+</html>

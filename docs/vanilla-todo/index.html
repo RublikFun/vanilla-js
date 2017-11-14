@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vanilla To Do List</title>
+    <link rel="stylesheet" href="dist/style.min.css">
+</head>
+
+<body>
+
+    <section class="todo-list-wrap">
+
+        <header>
+        <h1>My To Do List</h1>
+            <div class="todo-form">
+                <input class="new-task-text" type="text" placeholder="Enter task title"> 
+                <span class="add-btn">Add</span>
+            </div>
+        </header>
+
+        <ul class="task-list">
+            <li class="done"><span>Buy milk</span><i class="remove">×</i></li>
+            <li><span>Learn English</span><i class="remove">×</i></li>
+            <li><span>Go to gym</span><i class="remove">×</i></li>
+        </ul>
+    </section>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="dist/toDoApp.js"></script>
+</body>
+
+</html>

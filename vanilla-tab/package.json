@@ -18,7 +18,7 @@
     "watch:js": "onchange \"src/*.js\" -- npm run build:js",
     "watch:css": "onchange \"src/*.css\" -- npm run build:css",
     "watch:all": "parallelshell \"npm run sync\" \"npm run watch:js\" \"npm run watch:css\"",
-    "dev": "npm run watch:all"
+    "dev": "npm run watch:all"    
   },
   "keywords": [],
   "author": "",
