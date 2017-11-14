@@ -1,6 +1,6 @@
 # Vanilla JS
 
-Simple jQuery plugin - EZ Accordion.
+My JavaScript workout :) 
 
 ## Demo
 
