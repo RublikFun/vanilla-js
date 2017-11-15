@@ -1,5 +1,4 @@
 /* To Do List */
-
 let listItems = document.getElementsByTagName('li'),
     deleteBnt = document.getElementsByClassName('remove'),
     tasksList = document.querySelector('ul'),
@@ -9,11 +8,9 @@ let listItems = document.getElementsByTagName('li'),
 let listItemsArray = Array.prototype.slice.call(listItems),
     deleteBntArray = Array.prototype.slice.call(deleteBnt);
 
-
 tasksList.addEventListener('click', doneTask, false);
 
 addNewTaskBtn.addEventListener('click', newTask, false);
-
 
 deleteBntArray.map((btn) => btn.addEventListener('click', deleteTask, false));
 
@@ -50,19 +47,13 @@ function deleteTask(event) {
                     }
                 }
             })
-            .then((value) => {
-                if (value == 'done') event.target.parentElement.classList.toggle('done')
-            });
+            .then((value) => { if (value == 'done') event.target.parentElement.classList.toggle('done') });
     }
 }
 
 function doneTask(event) {
-    if (event.target.tagName == 'LI') {
-        event.target.classList.toggle('done');
-    }
-    if (event.target.tagName == 'SPAN') {
-        event.target.parentElement.classList.toggle('done');
-    }
+    if (event.target.tagName == 'LI') event.target.classList.toggle('done');
+    if (event.target.tagName == 'SPAN') event.target.parentElement.classList.toggle('done');
 }
 
 function newTask() {

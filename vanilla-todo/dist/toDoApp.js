@@ -1,7 +1,6 @@
 'use strict';
 
 /* To Do List */
-
 var listItems = document.getElementsByTagName('li'),
     deleteBnt = document.getElementsByClassName('remove'),
     tasksList = document.querySelector('ul'),
@@ -58,12 +57,8 @@ function deleteTask(event) {
 }
 
 function doneTask(event) {
-    if (event.target.tagName == 'LI') {
-        event.target.classList.toggle('done');
-    }
-    if (event.target.tagName == 'SPAN') {
-        event.target.parentElement.classList.toggle('done');
-    }
+    if (event.target.tagName == 'LI') event.target.classList.toggle('done');
+    if (event.target.tagName == 'SPAN') event.target.parentElement.classList.toggle('done');
 }
 
 function newTask() {
